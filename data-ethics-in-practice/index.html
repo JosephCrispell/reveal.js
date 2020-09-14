@@ -41,6 +41,14 @@
 					<img align="left" src="logos/DataScienceCampus_logo.png" width="20%">&nbsp;
 					<img src="logos/ONS_logo.webp" width="30%">&nbsp;
 					<img align="right" src="logos/FCDO-white_logo.png" width="20%">
+
+					<aside class="notes">
+						Thanks to the organisers for inviting Olivia and I.<br><br>
+
+						Data scientist within the Foreign, Commonwealth, & Development Office (FCDO)<br><br>
+
+						Talk about different ethical considerations in projects I've worked on to illustrate data ethics in practice.
+					</aside>
 				</section>
 
 				<!-- Section 2 -->
@@ -55,6 +63,16 @@
 							<li>Pathogen genomics</li>
 							<li>Foreign, Commonwealth and Development Office</li>
 						</ul>
+
+						<aside class="notes">
+							Started out studying Zoology at the University of Glasgow<br><br>
+
+							Went on to study pathogen transmission during my PhD<br><br>
+
+							Focused in on the use of genomics to track transmission.<br><br>
+
+							Joined FCDO back in February to use data science to help AID operations around the world.
+						</aside>
 					</section>
 
 					<!-- Slide 2.2: my website -->
@@ -63,7 +81,18 @@
 
 				<!-- Slide 3: what is data ethics -->
 				<section>
+					<p style="position: fixed; top: 0; width:100%; text-align: left; font-size:15px">Words drawn from: <a href="http://doi.org/10.5281/zenodo.3233986">Data Ethics Framework</a></p>
 					<a href="https://www.gov.uk/government/publications/data-ethics-framework/data-ethics-framework"><img src="images/dataEthics_wordcloud.png" alt="snp array" style="height: 80%; width: auto"></a>
+
+					<aside class="notes">
+						Olivia has a done a great job of defining and exploring data ethics.<br><br>
+
+						What I wanted to do here was reflect on what I consider to be data ethics.<br><br>
+
+						For me, it's the exploring and understanding the good and bad of working with data.<br><br>
+						
+						What should we be thinking about as we store, process and report our data?
+					</aside>
 				</section>
 
 				<!-- Section 4 -->
@@ -73,11 +102,26 @@
 					<section>
 						<h2>Improving Cancer mutation panels</h2>
 						<p style="position: fixed; bottom: 0; width:100%; text-align: right; font-style: italic !important">ACCURACY</p>
+
+						<aside class="notes">
+							One of the first projects I worked on with with a bioinformatics company in Germany as an intern.<br><br>
+
+							I worked in a team that was analysing data for building cancer panels - identifying mutations in our genomes associated with cancers<br><br>
+
+							What was critical in this work was accuracy - can we accurately identify mutations associated with particular cancers?
+						</aside>
 					</section>
 
 					<!-- Slide 4.2: SNP array -->
 					<section>
+						<p style="position: fixed; top: 0; width:100%; text-align: left; font-size:15px">Image credit: <a href="https://www.illumina.com/techniques/popular-applications/genotyping.html">Illumina</a></p>
 						<img src="https://www.illumina.com/content/dam/illumina-marketing/images/techniques/infinium-xt-web-graphic.jpg" alt="snp array" style="height: 80%; width: auto">
+
+						<aside class="notes">
+							To identify mutations, the team compared sequencing data from people with and without cancers.<br><br>
+
+							The aim was to develop a panel of mutations that could be used to identify individuals at risk of particular cancers.
+						</aside>
 					</section>
 
 					<!-- Slide 4.3: false positives -->
@@ -103,10 +147,18 @@
 								</tr>
 							</tbody>
 						</table>
+
+						<aside class="notes">
+							A key consideration here was sequencing quality. Sequencing machines can make mistakes.<br><br>
+
+							Need to distinguish real mutations from sequencing errors.
+						</aside>
 					</section>
 
 					<!-- Slide 4.4: VCF file -->
 					<section>
+						<p style="position: fixed; top: 0; width:100%; text-align: left; font-size:15px">Variant Call Format (VCF) file <a href="https://en.wikipedia.org/wiki/Variant_Call_Format#:~:text=The%20Variant%20Call%20Format%20(VCF,as%20the%201000%20Genomes%20Project.">specification</a></p>
+						
 						<pre><code class="plaintext" data-trim data-line-numbers="19-24">
 							##fileformat=VCFv4.3
 							##fileDate=20090805
@@ -133,6 +185,12 @@
 							20     1230237  .          T     .      47    PASS    NS=3;DP=13;AA=T                   GT:GQ:DP:HQ  0|0:54:7:56,60  0|0:48:4:51,51   0/0:61:2
 							20     1234567  microsat1  GTC   G,GTCT 50    PASS    NS=3;DP=9;AA=G                    GT:GQ:DP     0/1:35:4        0/2:17:2         1/1:40:3
 						</code></pre>
+
+						<aside class="notes">
+							Sequencing machines thankfully give us a lot of quality information.<br><br>
+							
+							With these data we can identify common signatures of sequencing errors.
+						</aside>
 					</section>
 				</section>
 
@@ -142,21 +200,53 @@
 					<section>
 						<h2>Cattle, possums, and bTB in New Zealand</h2>
 						<p style="position: fixed; bottom: 0; width:100%; text-align: right; font-style: italic !important">SAMPLING</p>
+
+						<aside class="notes">
+							Another project investigated bovine tuberculosis in cattle.<br><br>
+
+							A key consideration in this project, although only clear at the end was sampling design.
+						</aside>
 					</section>
 
 					<!-- Slide 5.2: New Zealand cattle -->
 					<section>
-						<img src="https://cdn.shopify.com/s/files/1/0006/2636/0367/articles/Why-Is-New-Zealand-Whey-The-Best_704x416.jpg?v=1536294009" alt="cattle" style="height: 80%; width: auto">
+						<p style="position: fixed; top: 0; width:100%; text-align: left; font-size:15px">Image credit: <a href="https://commons.wikimedia.org/wiki/File:Cattle_stop_sign_-_New_Zealand.jpg">Wikimedia</a></p>
+						<img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Cattle_stop_sign_-_New_Zealand.jpg" alt="cattle" style="width: 75%">
+
+						<aside class="notes">
+							Bovine tuberculosis is a problem in cattle populations worldwide.<br><br>
+
+							It is a disease of the lungs. In many countries controlling bovine tuberculosis means culling thousands of cattle each year.<br><br>
+
+							The bacteria that causes bovine tuberculosis infects cattle but also many other animals.<br><br>
+						</aside>
 					</section>
 
-					<!-- Slide 5.2: New Zealand cattle -->
+					<!-- Slide 5.2: New Zealand possums -->
 					<section>
-						<img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Trichosurus_vulpecula_1.jpg" alt="possum" style="width: 35%">
+						<p style="position: fixed; top: 0; width:100%; text-align: left; font-size:15px">Image credit: <a href="https://commons.wikimedia.org/wiki/File:Brushtail_Possum_-_AndrewMercer_IMG40144.jpg">Wikimedia</a></p>
+						<img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Brushtail_Possum_-_AndrewMercer_IMG40135.jpg" alt="possum" style="width: 75%">
+
+						<aside class="notes">
+							I joined a team in New Zealand wanting to understand what role possum populations were playing.<br><br>
+							
+							The brushtail possum in New Zealand is a pest species introduced because of its fur.<br><br>
+
+							There are now 30 million possums in New Zealand and they are often infected with the bacteria causing bovine tuberculosis.
+						</aside>
 					</section>
 
 					<!-- Slide 5.2: sampling locations -->
 					<section>
 						<img src="images/newzealand_sampling.png" alt="cattle" style="width: 70%">
+
+						<aside class="notes">
+							A team in New Zealand had sampled hundreds of infected cattle and wildlife from across New Zealand.<br><br>
+
+							Unfortunately, to address the question of transmission we needed samples from cattle and wildlife living in the same area at the same time.<br><br>
+
+							So we couldn't quantify the direction of transmission but we did find that possums and cattle were often infected with the same strain and strong evidence for transmission to and from cattle.
+						</aside>
 					</section>
 
 					<!-- Slide 5.3: NZ article -->
@@ -169,6 +259,16 @@
 					<section>
 						<h2>Cattle, badgers, and bTB in Woodchester Park</h2>
 						<p style="position: fixed; bottom: 0; width:100%; text-align: right; font-style: italic !important">REPRESENTATIVENESS</p>
+
+						<aside class="notes">
+							Another opportunity to study the transmission of the bacteria causing bovine tuberculosis came up in England.<br><br>
+
+							Here, it isn't possums that are implicated, it's badgers.<br><br>
+
+							Also, in England it is a much bigger problem. Thousands of herds are infected!<br><br>
+
+							What was critical with there analyses was representativeness, understand where our data came from and how representative our results were of other areas.
+						</aside>
 					</section>
 					
 					<!-- Slide 6.2: news articles -->
@@ -178,13 +278,30 @@
 							<img class="fragment" src="images/BTB_guardian.png"  width="650" height="auto">
 							<img class="fragment" src="images/BTB_gov.png" width="450" height="auto">
 						</div>
+						
+						<aside class="notes">
+							At least part of the problem is political!<br><br>
+
+							Almost every week there is some controversy about the different control options in the UK.<br><br>
+
+							There was loads of evidence that cattle and badgers were infected with similar strains of bacteria but none saying who was infecting whom?
+						</aside>
 					</section>
 
-					<!-- Slide 6.3: ibTB -->
-					<section data-background-iframe="https://ibtb.co.uk/" data-background-interactive data-preload></section>
-
 					<!-- Embed google map -->
-					<section data-background-iframe="https://www.google.com/maps/d/u/0/embed?mid=1QGnW6j9L3AXn0YM0rUoQc2-qQm3epdXV" data-background-interactive data-preload></section>
+					<section data-background-iframe="https://www.google.com/maps/d/u/0/embed?mid=1QGnW6j9L3AXn0YM0rUoQc2-qQm3epdXV" data-background-interactive data-preload>
+						<aside class="notes">
+							A major difference to the previous work in New Zealand was the size of the sampling areas.<br><br>
+
+							Instead of hundreds of samples from across an entire country, we had hundreds of samples from a tiny 10km squared area in the South West of England.<br><br>
+
+							With these data we were able analyse the movements of cattle and badgers alongside the similarlity of their bacteria and found that the bacteria was being transmitted between the cattle and badgers and most frequently from badgers to cattle.<br><br>
+
+							Importantly though, we sampled a tiny area in the South West of England. Our results while important couldn't tell us much about what was going on in the rest of the country.<br><br>
+
+							Our sampling area was too small and similar projects in other areas would be needed.
+						</aside>
+					</section>
 
 					<!-- Slide 6.3: WP article -->
 					<section data-background-iframe="articles/WP_article.pdf" data-background-interactive data-preload></section>	
@@ -196,11 +313,40 @@
 					<section>
 						<h2>Mapping HIV in C&ocircte d'Ivoire</h2>
 						<p style="position: fixed; bottom: 0; width:100%; text-align: right; font-style: italic !important">ANONYMITY</p>
+
+						<aside class="notes">
+							A project I'm currently working really highlights the importance of anonymity.<br><br>
+
+							I've joined a team hoping to map HIV risk in adolescents in Cote d'Ivoire in West Africa.<br><br>
+
+							Every five or so years, comprehensive national surveys are conducted to quantify HIV prevalence.<br><br>
+
+							We want to see whether we can delve into these data to establish indicators of risk that was more readily available and more regularly updated to get more rapid signals of risk.
+						</aside>
 					</section>
 
 					<!-- Slide 5.2: population density -->
 					<section>
-						<img src="images/cotedivoire_popDensity.png" alt="cattle" style="width: 70%">
+						<p style="position: fixed; top: 0; width:100%; text-align: left; font-size:15px">Data source: <a href="https://data.humdata.org/dataset/highresolutionpopulationdensitymaps-civ">Data for good</a></p>
+						<img src="images/cotedivoire_popDensity.png" alt="density" style="width: 70%">
+
+						<aside class="notes">
+							However there are two important aspects we are considering while we are planning this project:<br><br>
+							1. How can we protect those vulnerable groups we aim to identify? From stigma for example.<br>
+							2. With highly sensitive data like HIV test results and socio-economic status, how can we protect our data subjects identities?
+						</aside>
+					</section>
+
+					<!-- Slide 5.2: displacement -->
+					<section>
+						<p style="position: fixed; top: 0; width:100%; text-align: left; font-size:15px">Image source: <a href="https://data.humdata.org/dataset/highresolutionpopulationdensitymaps-civ">Demographic Household Surveys</a></p>
+						<img src="https://www.researchgate.net/profile/Clara_Burgert/publication/291343742/figure/fig1/AS:320352325521409@1453389354194/DHS-household-survey-displacement-process.png" alt="displacement" style="width: 70%">
+
+						<aside class="notes">
+							Methods such as random displacement can be used to protect individuals by masking their locations.<br><br>
+
+							Any method weighs the importance of anonmynity against the utility of the infromation in the data.
+						</aside>
 					</section>
 				</section>
 
@@ -209,6 +355,12 @@
 					<!-- Slide 8.1: RAP -->
 					<section>
 						<h2>Reproducible data science</h2>
+
+						<aside class="notes">
+							Lastly, I want to touch upon a really important aspect of my work as a data scientist.<br><br>
+
+							As a team we are teaching about what the use and importance of reproducible data science, which is essential to ensure we are considering all aspects of data ethics.
+						</aside>
 					</section>
 
 					<!-- Transparent: README.md, Rmarkdown, and metadata.json. Quote about how it is hard to write good code twitter UCD -->
@@ -225,6 +377,10 @@
 						</code></pre>
 
 						<p style="position: fixed; bottom: 0; width:100%; text-align: right; font-style: italic !important">BE TRANSPARENT</p>
+
+						<aside class="notes">
+							We must be transparent in our project, clearly documenting our data, our coding, our analyses, results and our intepretation.
+						</aside>
 					</section>
 
 					<!-- Open: GitHub -->
@@ -233,6 +389,10 @@
 						<img src="images/Community.png" alt="open" style="width: 75%; background-color:white;">
 
 						<p style="position: fixed; bottom: 0; width:100%; text-align: right; font-style: italic !important">BE OPEN</p>
+
+						<aside class="notes">
+							We must be open. Not working in silos, but publicising our projects, joining the open-source community of sharing with and learning from others.
+						</aside>
 					</section>
 
 					<!-- Reproducible: Turing book diagram -->
@@ -241,6 +401,10 @@
 						<img src="images/ReproducibleDefinitionGrid.jpg" alt="reproducible" style="width: 75%">
 
 						<p style="position: fixed; bottom: 0; width:100%; text-align: right; font-style: italic !important">BE MORE THAN REPRODUCIBLE</p>
+
+						<aside class="notes">
+							It isn't enough to be reproducible, we must build tools that others can easily understand, use, and adapt.
+						</aside>
 					</section>
 				</section>
 
@@ -255,6 +419,10 @@
 						<li>UK government Data Ethics <a href="https://www.gov.uk/government/publications/data-ethics-framework/data-ethics-framework">Framework</a></li>
 						<li>A <a href="https://www.butterfly.com.au/blog/website-development/clean-high-quality-code-a-guide-on-how-to-become-a-better-programmer">guide</a> to how to become a better programmer</li>
 					</ul>
+
+					<aside class="notes">
+						I'll finish by sharing a few resources. I've barely scratched the surface of data ethics and hopefully some of these will highlight the many other important aspects that I've missed.
+					</aside>
 				</section>
 
 				<!-- Slide X: END -->
