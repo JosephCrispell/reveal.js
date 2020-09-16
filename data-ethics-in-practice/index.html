@@ -43,11 +43,11 @@
 					<img align="right" src="logos/FCDO-white_logo.png" width="20%">
 
 					<aside class="notes">
-						Thanks to the organisers for inviting Olivia and I.<br><br>
+						Thanks to the organisers for inviting Olivia and I to talk about data ethics.<br><br>
 
-						Data scientist within the Foreign, Commonwealth, & Development Office (FCDO)<br><br>
+						I'm a data scientist working in the Foreign, Commonwealth, & Development Office (FCDO)<br><br>
 
-						Talk about different ethical considerations in projects I've worked on to illustrate data ethics in practice.
+						Today I'm going to talk about different aspects of data ethics in projects that I've worked on.
 					</aside>
 				</section>
 
@@ -65,13 +65,13 @@
 						</ul>
 
 						<aside class="notes">
-							Started out studying Zoology at the University of Glasgow<br><br>
+							To start with, a wee bit more about me. I started my studies at the University of Glasgow, studying Zoology - animals<br><br>
 
-							Went on to study pathogen transmission during my PhD<br><br>
+							I followed that by studying pathogen transmission during my PhD<br><br>
 
-							Focused in on the use of genomics to track transmission.<br><br>
+							As my studies developed I became focused on programming and using data, specifically genomic data to track transmission.<br><br>
 
-							Joined FCDO back in February to use data science to help AID operations around the world.
+							I joined FCDO back in February to use data science to help AID operations around the world.
 						</aside>
 					</section>
 
@@ -91,24 +91,26 @@
 
 						For me, it's the exploring and understanding the good and bad of working with data.<br><br>
 						
-						What should we be thinking about as we store, process and report our data?
+						What should we be thinking about as we store, process and report our data?<br><br>
+
+						I'm going to move now to illustrating important data ethics concepts and how they arose in different projects I've worked on.
 					</aside>
 				</section>
 
 				<!-- Section 4 -->
 				<section>
 
-					<!-- Slide 4.1: cancer panels -->
+					<!-- Slide 4.1: cancer panels - start with a simpler title?? Detewrmining the accuracy of cancer mutation detection - UNCERTAINTY-->
 					<section>
-						<h2>Improving Cancer mutation panels</h2>
+						<h2>Improving Cancer mutation detection</h2>
 						<p style="position: fixed; bottom: 0; width:100%; text-align: right; font-style: italic !important">ACCURACY</p>
 
 						<aside class="notes">
 							One of the first projects I worked on with with a bioinformatics company in Germany as an intern.<br><br>
 
-							I worked in a team that was analysing data for building cancer panels - identifying mutations in our genomes associated with cancers<br><br>
+							We wanted to explore the methods we were using to find mutations in people's genomes associated with cancers<br><br>
 
-							What was critical in this work was accuracy - can we accurately identify mutations associated with particular cancers?
+							The worked hinged around understanding the accuracy of our data. When we identified a mutation that was associated with cancer, how confident were we?
 						</aside>
 					</section>
 
@@ -118,9 +120,9 @@
 						<img src="https://www.illumina.com/content/dam/illumina-marketing/images/techniques/infinium-xt-web-graphic.jpg" alt="snp array" style="height: 80%; width: auto">
 
 						<aside class="notes">
-							To identify mutations, the team compared sequencing data from people with and without cancers.<br><br>
+							The aim was to identify a panel of mutations in people's genomes that were linked to cancers.<br><br>
 
-							The aim was to develop a panel of mutations that could be used to identify individuals at risk of particular cancers.
+							When we think about accuracy here, we are thinking about those people undergoing tests and treatments.
 						</aside>
 					</section>
 
@@ -138,7 +140,7 @@
 								<tr>
 									<td>Positive</td>
 									<td>True positive</td>
-									<td style="color:red; border-color: white;">False positive</td>
+									<td>False positive</td>
 								</tr>
 								<tr>
 									<td>Negative</td>
@@ -149,9 +151,11 @@
 						</table>
 
 						<aside class="notes">
-							A key consideration here was sequencing quality. Sequencing machines can make mistakes.<br><br>
+							If we tell someone they are at risk of particular cancer when they are not - a false positive - that could have devastating consequences.<br><br>
 
-							Need to distinguish real mutations from sequencing errors.
+							If we don't identify an individual at risk - a false negative - then we may have missed an opportunity to catch a cancer early.<br><br>
+
+							The ethical consequences of accurately identifying mutations associated with cancers are massive!
 						</aside>
 					</section>
 
@@ -187,9 +191,11 @@
 						</code></pre>
 
 						<aside class="notes">
-							Sequencing machines thankfully give us a lot of quality information.<br><br>
-							
-							With these data we can identify common signatures of sequencing errors.
+							To identify mutations, we use sequencing data. We take samples from people with and without cancers and sequence their genomes.<br><br>
+
+							A key consideration here is that sequencing machines can make mistakes. Thankfully they do provide indicators of quality.<br><br>
+
+							Here we have some processed sequencing data reporting the position and type of a range of mutations. Alongside this there are measures of quality that we used to understand when and why sequencing occurred to help us remove the false positive mutations that were actually sequencing errors.
 						</aside>
 					</section>
 				</section>
@@ -202,9 +208,11 @@
 						<p style="position: fixed; bottom: 0; width:100%; text-align: right; font-style: italic !important">SAMPLING</p>
 
 						<aside class="notes">
-							Another project investigated bovine tuberculosis in cattle.<br><br>
+							Later on in my PhD I started investigating bovine tuberculosis. A disease of cattle that affects their lungs.<br><br>
 
-							A key consideration in this project, although only clear at the end was sampling design.
+							Bovine tuberculosis is a big problem around the world and what's interesting is that it doesn't just affect cows. It can affect us and many other animals.<br><br>
+
+							What became clear in this research is the importance of sampling. If we aiming to answer a specific question, in this case what role are wildlife playing in spreading infection to cattle, we need to ensure our sampling is designed with that question in mind otherwise our results may be misleading.
 						</aside>
 					</section>
 
@@ -214,11 +222,7 @@
 						<img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Cattle_stop_sign_-_New_Zealand.jpg" alt="cattle" style="width: 75%">
 
 						<aside class="notes">
-							Bovine tuberculosis is a problem in cattle populations worldwide.<br><br>
-
-							It is a disease of the lungs. In many countries controlling bovine tuberculosis means culling thousands of cattle each year.<br><br>
-
-							The bacteria that causes bovine tuberculosis infects cattle but also many other animals.<br><br>
+							In New Zealand, millions of dollars are spent each year to maintain low levels of bovine tuberculosis in their cattle.<br><br>
 						</aside>
 					</section>
 
@@ -228,15 +232,15 @@
 						<img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Brushtail_Possum_-_AndrewMercer_IMG40135.jpg" alt="possum" style="width: 75%">
 
 						<aside class="notes">
-							I joined a team in New Zealand wanting to understand what role possum populations were playing.<br><br>
-							
-							The brushtail possum in New Zealand is a pest species introduced because of its fur.<br><br>
+							The possum is thought to be mostly to blame. Its a species that was introduced for the fur trade<br><br>
 
-							There are now 30 million possums in New Zealand and they are often infected with the bacteria causing bovine tuberculosis.
+							There are now 30 million possums in New Zealand and they are often found to have bovine tuberculosis.<br><br>
+
+							Our research wanted to investigate their role in more detail - were they really spreading infecting cattle?
 						</aside>
 					</section>
 
-					<!-- Slide 5.4: sampling locations -->
+					<!-- Slide 5.4: sampling locations - quite hard to see! White outline-->
 					<section>
 						<img src="images/newzealand_sampling.png" alt="cattle" style="width: 70%">
 
@@ -245,7 +249,9 @@
 
 							Unfortunately, to address the question of transmission we needed samples from cattle and wildlife living in the same area at the same time.<br><br>
 
-							So we couldn't quantify the direction of transmission but we did find that possums and cattle were often infected with the same strain and strong evidence for transmission to and from cattle.
+							We found that when estimated the direction of transmission between cattle and wildlife it was highly influenced by our sampling design. So in the end we had to discard that aim and simply describe the patterns of diversity in cattle and wildlife at the national scale.<br><br>
+
+							Being present at the time of sampling is often impossible, but what's important is recognising what questions we can ask with the data available.
 						</aside>
 					</section>
 
@@ -261,13 +267,14 @@
 						<p style="position: fixed; bottom: 0; width:100%; text-align: right; font-style: italic !important">REPRESENTATIVENESS</p>
 
 						<aside class="notes">
-							Another opportunity to study the transmission of the bacteria causing bovine tuberculosis came up in England.<br><br>
 
-							Here, it isn't possums that are implicated, it's badgers.<br><br>
+							Learning from our work in New Zealand, we conducted similar research in England.<br><br>
 
-							Also, in England it is a much bigger problem. Thousands of herds are infected!<br><br>
+							In England, there is a much bigger bovine tuberculosis problem with thousands of cattle being culled every year. Instead of possums being implicated, badgers are thought to spread infection to cattle<br><br>
 
-							What was critical with there analyses was representativeness, understand where our data came from and how representative our results were of other areas.
+							Our research aimed to address a critical unanswered question, how frequently and in what direction was infection transmitted between cattle and badgers.<br><br>
+
+							What was essential in this work was understanding the representativeness of our analyses. Where were the results of our work relevant? In our case this had important implications as our work could be used as the basis for cattle and badger population culling operations.
 						</aside>
 					</section>
 					
@@ -280,11 +287,9 @@
 						</div>
 						
 						<aside class="notes">
-							At least part of the problem is political!<br><br>
+							A big part of the bovine tuberculosis problem in England is policital.<br><br>
 
 							Almost every week there is some controversy about the different control options in the UK.<br><br>
-
-							There was loads of evidence that cattle and badgers were infected with similar strains of bacteria but none saying who was infecting whom?
 						</aside>
 					</section>
 
@@ -299,7 +304,7 @@
 
 							Importantly though, we sampled a tiny area in the South West of England. Our results while important couldn't tell us much about what was going on in the rest of the country.<br><br>
 
-							Our sampling area was too small and similar projects in other areas would be needed.
+							To answer the question about the directionality of sampling we needed to densely sample a small area, but with this sampling we can't say much about what is going on in the rest of the country. It was essential to highlight that our project was the start of the question about directionality and more studies were needed to inform the national control strategy.
 						</aside>
 					</section>
 
@@ -325,44 +330,67 @@
 						</aside>
 					</section>
 
-					<!-- Slide 5.2: population density -->
+					<!-- Slide 7.2: population density -->
 					<section>
 						<p style="position: fixed; top: 0; width:100%; text-align: left; font-size:15px">Data source: <a href="https://data.humdata.org/dataset/highresolutionpopulationdensitymaps-civ">Data for good</a></p>
 						<img src="images/cotedivoire_popDensity.png" alt="density" style="width: 70%">
 
 						<aside class="notes">
 							However there are two important aspects we are considering while we are planning this project:<br><br>
-							1. How can we protect those vulnerable groups we aim to identify? From stigma for example.<br>
-							2. With highly sensitive data like HIV test results and socio-economic status, how can we protect our data subjects identities?
+							1. How can we protect those vulnerable groups we aim to identify? From stigma for example. Here we need to carefully consider the needs of our stakeholders and ensure access to our results is carefully restricted.<br>
+							2. With highly sensitive data like HIV test results and socio-economic status, how can we protect our data subjects identities? As we work with sensitive data we need to consider these sensitivities in how we store, analyse and report our data.
 						</aside>
 					</section>
 
-					<!-- Slide 5.3: displacement -->
+					<!-- Slide 7.3: displacement -->
 					<section>
 						<img src="images/displacedRandomLocations.png" alt="displacement" style="width: 50%">
 
 						<aside class="notes">
-							Methods such as random displacement can be used to protect individuals by masking their locations.<br><br>
+							Methods such as random displacement can be used to protect individuals by masking their locations. For example, for national HIV surveys the locations of individual's sampled are randomly displaced by 2km in urban areas or 5km in rural areas to ensure it isn't possible to trace the results back to the individuals tested.<br><br>
 
-							Any method weighs the importance of anonymity against the utility of the information in the data.
+							Any anonymisation method weighs the importance of anonymity against the utility of the data.
 						</aside>
 					</section>
 				</section>
 
-				<!-- Section 8 -->
+				<!-- Slide 8: summing up -->
 				<section>
-					<!-- Slide 8.1: RAP -->
+					<h2>Data ethics themes</h2>
+					<ul>
+						<li>Accuracy</li>
+						<li>Sampling</li>
+						<li>Representiveness</li>
+						<li>Anonymity</li>
+					</ul>
+
+					<aside class="notes">
+						Hopefully each of these projects has highlighted a key theme that we must consider in our data science projects.<br><br>
+
+						We must capture the accuracy of our results and the uncertainty around that.<br><br>
+
+						We must consider the appropriateness of our sampling to address our research question.<br><br>
+
+						As we report our results we must carefully layout where they are relevant.<br><br>
+
+						We have an obligation to consider the sensitivity of our data and store, process, and report it appropriately.
+					</aside>
+				</section>
+
+				<!-- Section 9 -->
+				<section>
+					<!-- Slide 9.1: RAP -->
 					<section>
 						<h2>Reproducible data science</h2>
-
+						<p style="position: fixed; bottom: 0; width:100%; text-align: right; font-style: italic !important">REPRODUCIBILITY</p>
 						<aside class="notes">
 							Lastly, I want to touch upon a really important aspect of my work as a data scientist.<br><br>
 
-							As a team we are teaching about what the use and importance of reproducible data science, which is essential to ensure we are considering all aspects of data ethics.
+							As a team we are teaching about what the use and importance of reproducible data science, which underpins all aspects of data ethics.
 						</aside>
 					</section>
 
-					<!-- Slide 8.2: transparency -->
+					<!-- Slide 9.2: transparency -->
 					<section>
 						<pre><code class="json" data-trim data-line-numbers="19-24">
 							{
@@ -378,11 +406,11 @@
 						<p style="position: fixed; bottom: 0; width:100%; text-align: right; font-style: italic !important">BE TRANSPARENT</p>
 
 						<aside class="notes">
-							We must be transparent in our project, clearly documenting our data, our coding, our analyses, results and our intepretation.
+							We must be transparent in our project, clearly documenting our data, coding, analyses, and results.
 						</aside>
 					</section>
 
-					<!-- Slide 8.3: open -->
+					<!-- Slide 9.3: open -->
 					<section>
 						<p style="position: fixed; top: 0; width:100%; text-align: left; font-size:15px">Image credit: <a href="http://doi.org/10.5281/zenodo.3233986">The Turing Way</a></p>
 						<img src="images/Community.png" alt="open" style="width: 75%; background-color:white;">
@@ -394,7 +422,7 @@
 						</aside>
 					</section>
 
-					<!-- Slide 8.4: reproducible -->
+					<!-- Slide 9.4: reproducible -->
 					<section>
 						<p style="position: fixed; top: 0; width:100%; text-align: left; font-size:15px">Image credit: <a href="http://doi.org/10.5281/zenodo.3233986">The Turing Way</a></p>
 						<img src="images/ReproducibleDefinitionGrid.jpg" alt="reproducible" style="width: 75%">
@@ -402,12 +430,12 @@
 						<p style="position: fixed; bottom: 0; width:100%; text-align: right; font-style: italic !important">BE MORE THAN REPRODUCIBLE</p>
 
 						<aside class="notes">
-							It isn't enough to be reproducible, we must build tools that others can easily understand, use, and adapt.
+							It isn't enough to be reproducible, we must build tools that can be easily understand, used, and adapted.
 						</aside>
 					</section>
 				</section>
 
-				<!-- Slide 9: resources -->
+				<!-- Slide 10: resources -->
 				<section>
 					<h2>Resources</h2>
 					<ul>
@@ -420,11 +448,11 @@
 					</ul>
 
 					<aside class="notes">
-						I'll finish by sharing a few resources. I've barely scratched the surface of data ethics and hopefully some of these will highlight the many other important aspects that I've missed.
+						I'll finish by sharing a few resources. I've barely scratched the surface of data ethics and hopefully some of these will highlight the many other important aspects to consider.
 					</aside>
 				</section>
 
-				<!-- Slide 10: END -->
+				<!-- Slide 11: END -->
 				<section>
 
 					<p style="position: fixed; top: 0; width:100%; text-align: left; font-size:15px">OFFICIAL</p>
