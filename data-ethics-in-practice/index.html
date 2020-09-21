@@ -31,6 +31,14 @@
 						<h2>Data ethics in practice</h2>
 						<p>Created by <a href="https://josephcrispell.github.io/">Joseph Crispell</a> using <a href="https://revealjs.com/">reveal.js</a></p>
 					</div>
+
+					<aside class="notes">
+						Hi everyone<br><br>
+
+						Thanks Olivia for that great presentation and thanks to the organisers for inviting me to talk today.<br><br>
+
+						Today, I'm going to talk about data ethics in practice. How I've considered different aspects of data ethics in the data science projects I've been involved in<br><br>
+					</aside>
 				</section>
 
 				<!-- Section 2 -->
@@ -45,7 +53,7 @@
 							<li>Zoology</li>
 							<li>Pathogen transmission</li>
 							<li>Pathogen genomics</li>
-							<li>Foreign, Commonwealth and Development Office</li>
+							<li>Office for National Statistics - <a href="https://datasciencecampus.ons.gov.uk/"> data science campus</a></li>
 						</ul>
 
 						<br><br><br>
@@ -55,13 +63,16 @@
 						<img align="right" src="logos/FCDO-white_logo.png" width="20%">
 
 						<aside class="notes">
-							To start with, a wee bit more about me. I started my studies at the University of Glasgow, studying Zoology - animals<br><br>
 
-							I followed that by studying pathogen transmission during my PhD<br><br>
+							First, a bit of background about my career.<br><br>
 
-							As my studies developed I became focused on programming and using data, specifically genomic data to track transmission.<br><br>
+							I grew up in the highlands of Scotland and came down to Glasgow to study Zoology<br><br>
 
-							I joined FCDO back in February to use data science to help AID operations around the world.
+							I then went on to study pathogen transmission during my PhD<br><br>
+
+							As my studies continued, I started to learn about programming and data and went on to use genomic data to track transmission.<br><br>
+
+							I continued this research and then recently I joined part of the Office for National Statistics data science campus that's using data science to help AID operations around the world.
 						</aside>
 					</section>
 
@@ -79,11 +90,11 @@
 
 						What I wanted to do here was reflect on what I consider to be data ethics.<br><br>
 
-						For me, it's the exploring and understanding the good and bad of working with data.<br><br>
+						For me, it's about exploring and understanding the good and bad of working with data.<br><br>
 						
-						What should we be thinking about as we store, process and report our data?<br><br>
+						What should we be considering as we store, process and report our data and analyses?<br><br>
 
-						I'm going to move now to illustrating important data ethics concepts and how they arose in different projects I've worked on.
+						Today I'm hopefully going to illustrate some important data ethics concepts and how they arose in different projects I've worked on.
 					</aside>
 				</section>
 
@@ -96,11 +107,13 @@
 						<p style="position: fixed; bottom: 0; width:100%; text-align: right; font-style: italic !important">ACCURACY</p>
 
 						<aside class="notes">
-							One of the first projects I worked on with with a bioinformatics company in Germany as an intern.<br><br>
+							One of the first projects I worked on was looking at methods to improve the way we identify mutations associated with different cancers<br><br>
 
-							We wanted to explore the methods we were using to find mutations in people's genomes associated with cancers<br><br>
+							Cancers can be caused by a range of factors, sometimes mutations in our genomes can causes cancers. If we can identify these mutation,s we can use them to understand whether an individual might develop a cancer and what treatments might work best.<br><br>
 
-							The worked hinged around understanding the accuracy of our data. When we identified a mutation that was associated with cancer, how confident were we?
+							The team wanted to understand the accuracy of the data used to identify mutations.<br><br>
+							
+							Accuracy is a key data ethics consideration, here we needed to be confident that the mutations we identified were actually associated with cancers. Otherwise we might be causing unnecessary treatments or stress to future patients.
 						</aside>
 					</section>
 
@@ -112,7 +125,7 @@
 						<aside class="notes">
 							The aim was to identify a panel of mutations in people's genomes that were linked to cancers.<br><br>
 
-							When we think about accuracy here, we are thinking about those people undergoing tests and treatments.
+							When we think about accuracy here, we are thinking about those people undergoing tests and treatments because they have a particular mutation we've identified.
 						</aside>
 					</section>
 
@@ -185,7 +198,7 @@
 
 							A key consideration here is that sequencing machines can make mistakes. Thankfully they do provide indicators of quality.<br><br>
 
-							Here we have some processed sequencing data reporting the position and type of a range of mutations. Alongside this there are measures of quality that we used to understand when and why sequencing occurred to help us remove the false positive mutations that were actually sequencing errors.
+							Here we have some processed sequencing data reporting the position and type of a range of mutations. Alongside this there are measures of quality that we used to understand when and why sequencing occurred to help us remove the false positive mutations that were actually sequencing errors rather than mutations associated with cancers.
 						</aside>
 					</section>
 				</section>
@@ -198,11 +211,13 @@
 						<p style="position: fixed; bottom: 0; width:100%; text-align: right; font-style: italic !important">SAMPLING</p>
 
 						<aside class="notes">
-							Later on in my PhD I started investigating bovine tuberculosis. A disease of cattle that affects their lungs.<br><br>
+							A later project I worked on was investigating bovine tuberculosis. A disease of cattle that affects their lungs.<br><br>
 
 							Bovine tuberculosis is a big problem around the world and what's interesting is that it doesn't just affect cows. It can affect us and many other animals.<br><br>
 
-							What became clear in this research is the importance of sampling. If we aiming to answer a specific question, in this case what role are wildlife playing in spreading infection to cattle, we need to ensure our sampling is designed with that question in mind otherwise our results may be misleading.
+							Our project aimed to understand what role wildlife playing in bovine tuberculosis in cattle in New Zealand<br><br>
+
+							The key ethics consideration here was sampling - it was crucial we understood the limitations of the data available.
 						</aside>
 					</section>
 
@@ -226,7 +241,7 @@
 
 							There are now 30 million possums in New Zealand and they are often found to have bovine tuberculosis.<br><br>
 
-							Our research wanted to investigate their role in more detail - were they really spreading infecting cattle?
+							Our research wanted to investigate their role in more detail - were they really spreading infection to cattle?
 						</aside>
 					</section>
 
@@ -235,11 +250,11 @@
 						<img src="images/newzealand_sampling.png" alt="cattle" style="width: 70%">
 
 						<aside class="notes">
-							A team in New Zealand had sampled hundreds of infected cattle and wildlife from across New Zealand.<br><br>
+							A team in New Zealand had sampled hundreds of infected cattle and wildlife across the country.<br><br>
 
 							Unfortunately, to address the question of transmission we needed samples from cattle and wildlife living in the same area at the same time.<br><br>
 
-							We found that when estimated the direction of transmission between cattle and wildlife it was highly influenced by our sampling design. So in the end we had to discard that aim and simply describe the patterns of diversity in cattle and wildlife at the national scale.<br><br>
+							We found that when estimated the direction of transmission between cattle and wildlife it was highly influenced by our sampling design. So in the end we had to discard that aim and simply describe the data available.<br><br>
 
 							Being present at the time of sampling is often impossible, but what's important is recognising what questions we can ask with the data available.
 						</aside>
@@ -262,9 +277,9 @@
 
 							In England, there is a much bigger bovine tuberculosis problem with thousands of cattle being culled every year. Instead of possums being implicated, badgers are thought to spread infection to cattle<br><br>
 
-							Our research aimed to address a critical unanswered question, how frequently and in what direction was infection transmitted between cattle and badgers.<br><br>
+							Our research aimed to address a critical unanswered question, how frequently was infection transmitted between cattle and badgers.<br><br>
 
-							What was essential in this work was understanding the representativeness of our analyses. Where were the results of our work relevant? In our case this had important implications as our work could be used as the basis for cattle and badger population culling operations.
+							What was essential in this work was understanding the representativeness of our analyses. Where were the results of our work relevant? In our case this had important implications as our work could be used as the basis for cattle and badger population culling operations across the country.
 						</aside>
 					</section>
 					
@@ -286,15 +301,15 @@
 					<!-- Slide 6.3: embed google map -->
 					<section data-background-iframe="https://www.google.com/maps/d/u/0/embed?mid=1QGnW6j9L3AXn0YM0rUoQc2-qQm3epdXV" data-background-interactive data-preload>
 						<aside class="notes">
-							A major difference to the previous work in New Zealand was the size of the sampling areas.<br><br>
+							We need to be sure we had high quality data underpinning our analyses.
+							
+							So, learning from New Zealand, we gather hundreds of samples from infected cattle and badgers living in a tiny area in the South West of England - Woodchester Park.<br><br>
 
-							Instead of hundreds of samples from across an entire country, we had hundreds of samples from a tiny 10km squared area in the South West of England.<br><br>
+							With these data we were able calculate how frequently the infection was spreading from badgers to cattle and vice versa.<br><br>
 
-							With these data we were able analyse the movements of cattle and badgers alongside the similarlity of their bacteria and found that the bacteria was being transmitted between the cattle and badgers and most frequently from badgers to cattle.<br><br>
+							Importantly though, we sampled a tiny area in the South West of England. Our results, while important, couldn't tell us much about what was going on in the rest of the country.<br><br>
 
-							Importantly though, we sampled a tiny area in the South West of England. Our results while important couldn't tell us much about what was going on in the rest of the country.<br><br>
-
-							To answer the question about the directionality of sampling we needed to densely sample a small area, but with this sampling we can't say much about what is going on in the rest of the country. It was essential to highlight that our project was the start of the question about directionality and more studies were needed to inform the national control strategy.
+							It was essential to highlight that our project was the start of understanding the direction of transmission between badgers and cattle and more studies were needed to inform the national control strategy.
 						</aside>
 					</section>
 
@@ -310,7 +325,7 @@
 						<p style="position: fixed; bottom: 0; width:100%; text-align: right; font-style: italic !important">ANONYMITY</p>
 
 						<aside class="notes">
-							A project I'm currently working really highlights the importance of anonymity.<br><br>
+							A project I'm currently working on, really highlights the importance of anonymity.<br><br>
 
 							I've joined a team hoping to map HIV risk in adolescents in Cote d'Ivoire in West Africa.<br><br>
 
@@ -326,8 +341,10 @@
 						<img src="images/cotedivoire_popDensity.png" alt="density" style="width: 70%">
 
 						<aside class="notes">
-							However there are two important aspects we are considering while we are planning this project:<br><br>
-							1. How can we protect those vulnerable groups we aim to identify? From stigma for example. Here we need to carefully consider the needs of our stakeholders and ensure access to our results is carefully restricted.<br>
+							However, there are two important aspects we are considering while we are planning this project:<br><br>
+
+							1. How can we protect those vulnerable groups we aim to identify? From stigma, for example. Here we need to carefully consider the needs of our stakeholders and ensure access to our results is carefully restricted.<br>
+
 							2. With highly sensitive data like HIV test results and socio-economic status, how can we protect our data subjects identities? As we work with sensitive data we need to consider these sensitivities in how we store, analyse and report our data.
 						</aside>
 					</section>
@@ -337,7 +354,7 @@
 						<img src="images/displacedRandomLocations.png" alt="displacement" style="width: 50%">
 
 						<aside class="notes">
-							Methods such as random displacement can be used to protect individuals by masking their locations. For example, for national HIV surveys the locations of individual's sampled are randomly displaced by 2km in urban areas or 5km in rural areas to ensure it isn't possible to trace the results back to the individuals tested.<br><br>
+							Methods such as random displacement can be used to protect individuals by masking their locations. For example, for national HIV surveys the locations of individual's tested are randomly displaced by 2km in urban areas or 5km in rural areas to ensure it isn't possible to trace the results back to the individuals tested.<br><br>
 
 							Any anonymisation method weighs the importance of anonymity against the utility of the data.
 						</aside>
@@ -359,7 +376,7 @@
 
 						We must capture the accuracy of our results and the uncertainty around that.<br><br>
 
-						We must consider the appropriateness of our sampling to address our research question.<br><br>
+						We must consider the appropriateness of our sampling to address our question.<br><br>
 
 						As we report our results we must carefully layout where they are relevant.<br><br>
 
@@ -374,7 +391,7 @@
 						<h2>Reproducible data science</h2>
 						<p style="position: fixed; bottom: 0; width:100%; text-align: right; font-style: italic !important">REPRODUCIBILITY</p>
 						<aside class="notes">
-							Lastly, I want to touch upon a really important aspect of my work as a data scientist.<br><br>
+							Lastly, I want to touch on a really important aspect of my work in the data science campus.<br><br>
 
 							As a team we are teaching about what the use and importance of reproducible data science, which underpins all aspects of data ethics.
 						</aside>
@@ -446,13 +463,17 @@
 				<section data-background="branding/background.png">
 
 					<div style="position: fixed; top: 750%; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.75); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-						<h2>THANKS FOR LISTENING!!</h2>
+						<h2>THANKS FOR LISTENING!</h2>
 						<p>Email: <a href="mailto:crispelljoseph@gmail.com">crispelljoseph@gmail.com</a><br>
 						   Website: <a href="https://josephcrispell.github.io/">josephcrispell.github.io</a><br>
 						   Twitter: <a href="https://twitter.com/JosephCrispell">@JosephCrispell</a><br>
 						   Presentation available <a href="https://github.com/JosephCrispell/reveal.js/tree/master/data-ethics-in-practice">here</a>.
 						</p>
 					</div>
+
+					<aside class="notes">
+						Thanks very much for listening.
+					</aside>
 				</section>
 			</div>
 		</div>
